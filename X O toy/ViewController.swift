@@ -8,12 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var currentTitle: UILabel!
     
     @IBOutlet weak var wonLbl: UILabel!
     
-
+    
     @IBOutlet weak var horThree: UIImageView!
     @IBOutlet weak var horTwo: UIImageView!
     @IBOutlet weak var horOne: UIImageView!
@@ -22,18 +22,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var vertOne: UIImageView!
     @IBOutlet weak var tepaChap: UIImageView!
     @IBOutlet weak var tepaOng: UIImageView!
-    @IBOutlet weak var sadSmile: UIImageView!
-    @IBOutlet weak var happySmile: UIImageView!
+    @IBOutlet weak var smile: UIImageView!
     @IBOutlet var btns: [UIButton]!
     
     var isX: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         restart()
     }
-
+    
     func restart(){
         horThree.isHidden = true
         horTwo.isHidden = true
@@ -44,8 +43,7 @@ class ViewController: UIViewController {
         tepaChap.isHidden = true
         tepaOng.isHidden = true
         wonLbl.textColor = .green
-        sadSmile.isHidden = true
-        happySmile.isHidden = true
+        smile.isHidden = true
         currentTitle.textColor = .yellow
         isX = true
         wonLbl.isHidden = true
@@ -55,7 +53,9 @@ class ViewController: UIViewController {
         }
         if isX{
             currentTitle.text = "X"
+            currentTitle.textColor = .systemBlue
         }else{
+            currentTitle.textColor = .systemRed
             currentTitle.text = "O"
         }
     }
@@ -64,12 +64,14 @@ class ViewController: UIViewController {
         restart()
     }
     
-
+    
     @IBAction func btnsPressed(_ sender: UIButton) {
         if isX {
             sender.setTitle("X", for: .normal)
+            sender.tintColor = .systemBlue
             isX = !isX
         }else{
+            sender.tintColor = .red
             sender.setTitle("O", for: .normal)
             isX = !isX
         }
@@ -99,171 +101,264 @@ class ViewController: UIViewController {
         
         if firstTitle == a && secondTitle == a && thirdTitle == a {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "X"
             currentTitle.textColor = .green
             horOne.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }
         else if firstTitle == a && fourthTitle == a && seventhTitle == a {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "X"
             currentTitle.textColor = .green
             vertOne.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
-     firstTitle == b && secondTitle == b && thirdTitle == b {
+            firstTitle == b && secondTitle == b && thirdTitle == b {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "O"
             currentTitle.textColor = .green
             horOne.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
             firstTitle == b && fourthTitle == b && seventhTitle == b {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "O"
             currentTitle.textColor = .green
             vertOne.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
             fifthTitle == a && firstTitle == a && ninthTitle == a {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "X"
             currentTitle.textColor = .green
             tepaChap.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
             fifthTitle == b && firstTitle == b && ninthTitle == b {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "O"
             currentTitle.textColor = .green
             tepaChap.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
             fifthTitle == a && thirdTitle == a && seventhTitle == a {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "X"
             currentTitle.textColor = .green
             tepaOng.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
             fifthTitle == b && thirdTitle == b && seventhTitle == b {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "O"
             currentTitle.textColor = .green
             tepaOng.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
             fifthTitle == a && secondTitle == a && eightthTitle == a {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "X"
             currentTitle.textColor = .green
             vertTwo.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
             fifthTitle == b && secondTitle == b && eightthTitle == b {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "O"
             currentTitle.textColor = .green
             vertTwo.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
             fifthTitle == a && fourthTitle == a && sixthTitle == a {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "X"
             currentTitle.textColor = .green
             horTwo.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
             fifthTitle == b && fourthTitle == b && sixthTitle == b {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "O"
             currentTitle.textColor = .green
             horTwo.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
             ninthTitle == a && sixthTitle == a && thirdTitle == a {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "X"
             currentTitle.textColor = .green
             vertThree.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
             ninthTitle == b && sixthTitle == b && thirdTitle == b {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "O"
             currentTitle.textColor = .green
             vertThree.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
             ninthTitle == a && eightthTitle == a && seventhTitle == a {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "X"
             currentTitle.textColor = .green
             horThree.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }else if
-                ninthTitle == b && eightthTitle == b && seventhTitle == b {
+            ninthTitle == b && eightthTitle == b && seventhTitle == b {
             for btn in btns {
-                                btn.isEnabled = false
-                            }
+                btn.isEnabled = false
+            }
             wonLbl.isHidden = false
             currentTitle.text = "O"
             currentTitle.textColor = .green
             horThree.isHidden = false
-            happySmile.isHidden = false
+            smile.isHidden = false
+            smile.image = UIImage(named: "happySmile")
         }
-            else if firstTitle != "" && secondTitle != "" && thirdTitle != "" && fourthTitle != "" && fifthTitle != "" && sixthTitle != "" && seventhTitle != "" && eightthTitle != "" && ninthTitle != ""{
-            sadSmile.isHidden = false
+        else if firstTitle != "" && secondTitle != "" && thirdTitle != "" && fourthTitle != "" && fifthTitle != "" && sixthTitle != "" && seventhTitle != "" && eightthTitle != "" && ninthTitle != ""{
+            smile.isHidden = false
+            smile.image = UIImage(named: "sadSmile")
             wonLbl.isHidden = false
             wonLbl.text = "won"
             currentTitle.text = "Nobody"
             currentTitle.textColor = .red
             wonLbl.textColor = .red
-            }
         }
+    }
+    
+    
+    
+    
+    //    func gameWinOptions(letter: String) {
+    //        if firstTitle == letter && secondTitle == letter && thirdTitle == letter {
+    //                    for btn in btns {
+    //                                        btn.isEnabled = false
+    //                                    }
+    //                    wonLbl.isHidden = false
+    //                    currentTitle.text = "X"
+    //                    currentTitle.textColor = .green
+    //                    horOne.isHidden = false
+    //                    sssssss.isHidden = false
+    //                }
+    //                else if firstTitle == letter && fourthTitle == letter && seventhTitle == letter {
+    //                    for btn in btns {
+    //                                        btn.isEnabled = false
+    //                                    }
+    //                    wonLbl.isHidden = false
+    //                    currentTitle.text = "X"
+    //                    currentTitle.textColor = .green
+    //                    vertOne.isHidden = false
+    //                    sssssss.isHidden = false
+    //                }else if
+    //             firstTitle == b && secondTitle == b && thirdTitle == b {
+    //                    for btn in btns {
+    //                                        btn.isEnabled = false
+    //                                    }
+    //                    wonLbl.isHidden = false
+    //                    currentTitle.text = "O"
+    //                    currentTitle.textColor = .green
+    //                    horOne.isHidden = false
+    //                    sssssss.isHidden = false
+    //                }else if
+    //                    firstTitle == b && fourthTitle == b && seventhTitle == b {
+    //                    for btn in btns {
+    //                                        btn.isEnabled = false
+    //                                    }
+    //                    wonLbl.isHidden = false
+    //                    currentTitle.text = "O"
+    //                    currentTitle.textColor = .green
+    //                    vertOne.isHidden = false
+    //                    sssssss.isHidden = false
+    //                }else if
+    //                    fifthTitle == a && firstTitle == a && ninthTitle == a {
+    //                    for btn in btns {
+    //                                        btn.isEnabled = false
+    //                                    }
+    //                    wonLbl.isHidden = false
+    //                    currentTitle.text = "X"
+    //                    currentTitle.textColor = .green
+    //                    tepaChap.isHidden = false
+    //                    sssssss.isHidden = false
+    //                }else if
+    //                    fifthTitle == b && firstTitle == b && ninthTitle == b {
+    //                    for btn in btns {
+    //                                        btn.isEnabled = false
+    //                                    }
+    //                    wonLbl.isHidden = false
+    //                    currentTitle.text = "O"
+    //                    currentTitle.textColor = .green
+    //                    tepaChap.isHidden = false
+    //                    sssssss.isHidden = false
+    //                }else if
+    //                    fifthTitle == a && thirdTitle == a && seventhTitle == a {
+    //                    for btn in btns {
+    //                                        btn.isEnabled = false
+    //                                    }
+    //                    wonLbl.isHidden = false
+    //                    currentTitle.text = "X"
+    //                    currentTitle.textColor = .green
+    //                    tepaOng.isHidden = false
+    //                    sssssss.isHidden = false
+    //                }
+    //    }
 }

@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63F7FB41269343BC0016415C /* X O toy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X O toy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63F7FB41269343BC0016415C /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F7FB44269343BC0016415C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63F7FB46269343BC0016415C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		63F7FB48269343BC0016415C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		63F7FB42269343BC0016415C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63F7FB41269343BC0016415C /* X O toy.app */,
+				63F7FB41269343BC0016415C /* TicTacToe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		63F7FB40269343BC0016415C /* X O toy */ = {
+		63F7FB40269343BC0016415C /* TicTacToe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63F7FB55269343BC0016415C /* Build configuration list for PBXNativeTarget "X O toy" */;
+			buildConfigurationList = 63F7FB55269343BC0016415C /* Build configuration list for PBXNativeTarget "TicTacToe" */;
 			buildPhases = (
 				63F7FB3D269343BC0016415C /* Sources */,
 				63F7FB3E269343BC0016415C /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "X O toy";
+			name = TicTacToe;
 			productName = "X O toy";
-			productReference = 63F7FB41269343BC0016415C /* X O toy.app */;
+			productReference = 63F7FB41269343BC0016415C /* TicTacToe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				63F7FB40269343BC0016415C /* X O toy */,
+				63F7FB40269343BC0016415C /* TicTacToe */,
 			);
 		};
 /* End PBXProject section */
@@ -287,6 +287,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5G8CDP9543;
 				INFOPLIST_FILE = "X O toy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +306,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5G8CDP9543;
 				INFOPLIST_FILE = "X O toy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -329,7 +331,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63F7FB55269343BC0016415C /* Build configuration list for PBXNativeTarget "X O toy" */ = {
+		63F7FB55269343BC0016415C /* Build configuration list for PBXNativeTarget "TicTacToe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63F7FB56269343BC0016415C /* Debug */,

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="X_O_toy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,15 +174,6 @@
                                             <action selector="btnsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iRh-fs-vfX"/>
                                         </connections>
                                     </button>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1200px-Smiley.svg" translatesAutoresizingMaskIntoConstraints="NO" id="kxw-Kr-P9v">
-                                        <rect key="frame" x="127" y="163" width="161" height="134"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMAGE 2021-07-07 12:17:31" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uz6-mc-PmP">
-                                        <rect key="frame" x="140" y="163" width="134" height="138"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
-                                    </imageView>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="815446" translatesAutoresizingMaskIntoConstraints="NO" id="mk0-A8-O6U">
                                         <rect key="frame" x="20" y="302" width="377" height="417"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -215,6 +206,10 @@
                                         <rect key="frame" x="18" y="431" width="375" height="417"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happySmile" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uz6-mc-PmP" userLabel="smile">
+                                        <rect key="frame" x="146" y="163" width="128" height="131"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -224,11 +219,10 @@
                     </view>
                     <connections>
                         <outlet property="currentTitle" destination="noF-re-C3e" id="ZyG-yW-ppa"/>
-                        <outlet property="happySmile" destination="kxw-Kr-P9v" id="GE8-Ty-c2Y"/>
                         <outlet property="horOne" destination="mDl-Xl-DV4" id="9Uj-k0-7rM"/>
                         <outlet property="horThree" destination="oYD-gB-edw" id="3M8-U7-pug"/>
                         <outlet property="horTwo" destination="5UR-4q-ddy" id="ij4-tt-hC4"/>
-                        <outlet property="sadSmile" destination="Uz6-mc-PmP" id="RM1-hF-z3L"/>
+                        <outlet property="smile" destination="Uz6-mc-PmP" id="0TG-U0-SWR"/>
                         <outlet property="tepaChap" destination="nM8-L0-9Vb" id="HCG-9p-H25"/>
                         <outlet property="tepaOng" destination="mk0-A8-O6U" id="oEg-sx-w11"/>
                         <outlet property="vertOne" destination="ctp-Ft-naR" id="MMu-31-BnX"/>
@@ -252,11 +246,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1200px-Smiley.svg" width="1200" height="1200"/>
         <image name="815446" width="512" height="512"/>
-        <image name="IMAGE 2021-07-07 12:17:31" width="155" height="152"/>
         <image name="IMG_20210707_123631" width="452" height="452"/>
         <image name="IMG_20210707_123643" width="512" height="512"/>
+        <image name="happySmile" width="1200" height="1200"/>
         <image name="vertical-line" width="452" height="452"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
